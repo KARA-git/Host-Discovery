@@ -7,7 +7,7 @@ The script combines multiple network scanning techniques to identify hosts and s
 - **ARP Scan**: Identifies devices in the local network by sending ARP requests.
 - **Ping Scan**: Uses ICMP echo requests to check if hosts are reachable.
 - **TCP Connect Scan**: Identifies open TCP ports on hosts by attempting to establish connections.
-
+ 
 **Code Breakdown**
 
 **1. Importing Necessary Libraries**
