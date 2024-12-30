@@ -7,7 +7,8 @@ import threading
 import time
 import sys
 
-# Global variable for timing control
+
+# Global variable for timing control.
 delay = 0.5  # Default delay between threads for scanning
 
 # ARP Scan
