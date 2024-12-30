@@ -44,7 +44,7 @@ The `tcp_connect_scan()` function attempts to establish a TCP connection to the 
 **How it works:**
 - Creates a socket and tries to connect to the target IP and port.
 - If the connection is successful, the port is marked as "open."
-- Uses `connect_ex()` to check connection status and handles errors gracefully.
+- socket.connect_ex(address) -> Like connect(address), but return an error indicator instead of raising an exception for errors returned by the C-level connect() call (other problems, such as “host not found,” can still raise exceptions). The error indicator is 0 if the operation succeeded, otherwise the value of the errno variable. This is useful to support, for example, asynchronous connects.
 
 **Threaded Execution:**
 The `tcp_scan_thread()` function wraps `tcp_connect_scan()` in threads for parallel scanning of multiple ports. A global delay variable (`delay`) ensures timing control between threads to avoid overwhelming the network.
